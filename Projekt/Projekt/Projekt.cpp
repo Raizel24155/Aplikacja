@@ -2,13 +2,29 @@
 //
 
 #include <iostream>
+#include "Calculator.h"
 
 using namespace std;
 
 int main()
 {
-    cout << "Hello World!\n";
-    cout << "WITAM!";
+    int choice;
+
+    cout << "Co Otworz aplikacje: \n";
+    cout << "1) Kalkulator \n";
+    cout << "2) ???? \n";
+    cout << "3) ???? \n";
+
+    cin >> choice;
+
+    switch (choice)
+    {
+        case 1:
+            Calculator().Start();
+        break;
+    }
+
+
 }
 
 // Uruchomienie programu: Ctrl + F5 lub menu Debugowanie > Uruchom bez debugowania
