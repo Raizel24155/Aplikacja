@@ -51,7 +51,7 @@ void Calculator::Choice()
         Addition();
     break;
     case 2:
-        Addition();
+        Subtraction();
     break;
     case 3:
         Addition();
@@ -73,15 +73,9 @@ void Calculator::Choice()
 
 void Calculator::Addition()
 {
-    //cout << "First number: ";
-    //cin >> number1;
-    //cout << "Second numer: ";
-    //cin >> number2;
-    //cout << "Your number is: " << number1 + number2;
-
     number = numbers[0];
 
-    for (int i = 1;i < amountOfNumbers; i++)
+    for (int i = 1; i < amountOfNumbers; i++)
     {
         
         if (numbers[i] < 0)
@@ -93,6 +87,27 @@ void Calculator::Addition()
             cout << number << " + " << numbers[i];
         }
         number += numbers[i];
+        cout << " = " << number << endl;
+
+    }
+}
+
+void Calculator::Subtraction()
+{
+    number = numbers[0];
+
+    for (int i = 1; i < amountOfNumbers; i++)
+    {
+
+        if (numbers[i] < 0)
+        {
+            cout << number << " - " << "(" << numbers[i] << ")";
+        }
+        else
+        {
+            cout << number << " - " << numbers[i];
+        }
+        number -= numbers[i];
         cout << " = " << number << endl;
 
     }

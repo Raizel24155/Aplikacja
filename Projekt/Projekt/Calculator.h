@@ -12,7 +12,7 @@ public:
 	void SetAmount();
 	void Choice();
 	void Addition();
-	void Substraction();
+	void Subtraction();
 	void Multiplication();
 	void Division();
 	void Power();
