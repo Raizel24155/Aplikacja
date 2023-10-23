@@ -4,9 +4,9 @@ class Calculator
 {
 private:
 	int choice;
-	int number;
 	int amountOfNumbers;
-	int numbers[];
+	float number;
+	float numbers[];
 public:
 	void Start();
 	void SetAmount();

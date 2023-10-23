@@ -54,10 +54,10 @@ void Calculator::Choice()
         Subtraction();
     break;
     case 3:
-        Addition();
+        Multiplication();
     break;
     case 4:
-        Addition();
+        Division();
     break;
     case 5:
         Addition();
@@ -108,6 +108,48 @@ void Calculator::Subtraction()
             cout << number << " - " << numbers[i];
         }
         number -= numbers[i];
+        cout << " = " << number << endl;
+
+    }
+}
+
+void Calculator::Multiplication()
+{
+    number = numbers[0];
+
+    for (int i = 1; i < amountOfNumbers; i++)
+    {
+
+        if (numbers[i] < 0)
+        {
+            cout << number << " * " << "(" << numbers[i] << ")";
+        }
+        else
+        {
+            cout << number << " * " << numbers[i];
+        }
+        number *= numbers[i];
+        cout << " = " << number << endl;
+
+    }
+}
+
+void Calculator::Division()
+{
+    number = numbers[0];
+
+    for (int i = 1; i < amountOfNumbers; i++)
+    {
+
+        if (numbers[i] < 0)
+        {
+            cout << number << " / " << "(" << numbers[i] << ")";
+        }
+        else
+        {
+            cout << number << " / " << numbers[i];
+        }
+        number /= numbers[i];
         cout << " = " << number << endl;
 
     }
